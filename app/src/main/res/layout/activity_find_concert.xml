@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".FindConcertActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="83dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/bruno_ace_sc"
+            android:text="Find Concerts"
+            android:textColor="#FF5722"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/highlightsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#FF5722"
+            android:text="Highlights"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Bandland 24 - Avenged Sevenfold -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/concertCard1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#222222"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/artistNameTextView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bandland 24 - Avenged Sevenfold"
+                        android:textColor="#FF5722"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/dateTextView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📅 23 Nov 2024"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/artistNameTextView1" />
+
+                    <TextView
+                        android:id="@+id/venueTextView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📍 NICE GROUNDS"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dateTextView1" />
+
+                    <TextView
+                        android:id="@+id/priceTextView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="🎟 ₹3500"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/venueTextView1" />
+
+                    <ImageButton
+                        android:id="@+id/shareButton1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:contentDescription="Share"
+                        android:src="@android:drawable/ic_menu_share"
+                        app:layout_constraintBottom_toBottomOf="@id/buyTicketsButton1"
+                        app:layout_constraintEnd_toStartOf="@id/buyTicketsButton1"
+                        app:layout_constraintTop_toTopOf="@id/buyTicketsButton1" />
+
+                    <Button
+                        android:id="@+id/buyTicketsButton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF5722"
+                        android:text="Buy Tickets"
+                        android:textColor="#000000"
+                        app:layout_constraintBottom_toBottomOf="@id/priceTextView1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/priceTextView1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Bandland 24 - Extreme -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/concertCard2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#222222"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/artistNameTextView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bandland 24 - Extreme"
+                        android:textColor="#FF5722"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/dateTextView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📅 24 Nov 2024"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/artistNameTextView2" />
+
+                    <TextView
+                        android:id="@+id/venueTextView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📍 NICE GROUNDS"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dateTextView2" />
+
+                    <TextView
+                        android:id="@+id/priceTextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="🎟 ₹3500"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/venueTextView2" />
+
+                    <ImageButton
+                        android:id="@+id/shareButton2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:contentDescription="Share"
+                        android:src="@android:drawable/ic_menu_share"
+                        app:layout_constraintBottom_toBottomOf="@id/buyTicketsButton2"
+                        app:layout_constraintEnd_toStartOf="@id/buyTicketsButton2"
+                        app:layout_constraintTop_toTopOf="@id/buyTicketsButton2" />
+
+                    <Button
+                        android:id="@+id/buyTicketsButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF5722"
+                        android:text="Buy Tickets"
+                        android:textColor="#000000"
+                        app:layout_constraintBottom_toBottomOf="@id/priceTextView2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/priceTextView2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- The Big Finish - Mr. Big -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/concertCard3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#222222"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/artistNameTextView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="The Big Finish - Mr. Big"
+                        android:textColor="#FF5722"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/dateTextView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📅 16 Feb 2025"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/artistNameTextView3" />
+
+                    <TextView
+                        android:id="@+id/venueTextView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📍 Phoenix Marketcity"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dateTextView3" />
+
+                    <TextView
+                        android:id="@+id/priceTextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="🎟 ₹2500"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/venueTextView3" />
+
+                    <ImageButton
+                        android:id="@+id/shareButton3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:contentDescription="Share"
+                        android:src="@android:drawable/ic_menu_share"
+                        app:layout_constraintBottom_toBottomOf="@id/buyTicketsButton3"
+                        app:layout_constraintEnd_toStartOf="@id/buyTicketsButton3"
+                        app:layout_constraintTop_toTopOf="@id/buyTicketsButton3" />
+
+                    <Button
+                        android:id="@+id/buyTicketsButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF5722"
+                        android:text="Buy Tickets"
+                        android:textColor="#000000"
+                        app:layout_constraintBottom_toBottomOf="@id/priceTextView3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/priceTextView3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Guns N' Roses -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/concertCard4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#222222"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/artistNameTextView4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Guns N' Roses"
+                        android:textColor="#FF5722"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/dateTextView4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📅 17 May 2025"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/artistNameTextView4" />
+
+                    <TextView
+                        android:id="@+id/venueTextView4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📍 Mahalakshmi Racecourse, Mumbai"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dateTextView4" />
+
+                    <TextView
+                        android:id="@+id/priceTextView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="🎟 ₹5999"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/venueTextView4" />
+
+                    <ImageButton
+                        android:id="@+id/shareButton4"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:contentDescription="Share"
+                        android:src="@android:drawable/ic_menu_share"
+                        app:layout_constraintBottom_toBottomOf="@id/buyTicketsButton4"
+                        app:layout_constraintEnd_toStartOf="@id/buyTicketsButton4"
+                        app:layout_constraintTop_toTopOf="@id/buyTicketsButton4" />
+
+                    <Button
+                        android:id="@+id/buyTicketsButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF5722"
+                        android:text="Buy Tickets"
+                        android:textColor="#000000"
+                        app:layout_constraintBottom_toBottomOf="@id/priceTextView4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/priceTextView4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Bangalore Open Air -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/concertCard5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#222222"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/artistNameTextView5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bangalore Open Air"
+                        android:textColor="#FF5722"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/dateTextView5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📅 7 Feb 2026"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/artistNameTextView5" />
+
+                    <TextView
+                        android:id="@+id/venueTextView5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📍 The Royal Orchid Resort"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dateTextView5" />
+
+                    <TextView
+                        android:id="@+id/priceTextView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="🎟 ₹15000"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/venueTextView5" />
+
+                    <ImageButton
+                        android:id="@+id/shareButton5"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:contentDescription="Share"
+                        android:src="@android:drawable/ic_menu_share"
+                        app:layout_constraintBottom_toBottomOf="@id/buyTicketsButton5"
+                        app:layout_constraintEnd_toStartOf="@id/buyTicketsButton5"
+                        app:layout_constraintTop_toTopOf="@id/buyTicketsButton5" />
+
+                    <Button
+                        android:id="@+id/buyTicketsButton5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF5722"
+                        android:text="Buy Tickets"
+                        android:textColor="#000000"
+                        app:layout_constraintBottom_toBottomOf="@id/priceTextView5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/priceTextView5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Animals As Leaders -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/concertCard6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#222222"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/artistNameTextView6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Animals As Leaders - Parrhesia India Tour"
+                        android:textColor="#FF5722"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/dateTextView6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📅 20-25 Aug 2024"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/artistNameTextView6" />
+
+                    <TextView
+                        android:id="@+id/priceTextView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="🎟 ₹1999"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dateTextView6" />
+
+                    <ImageButton
+                        android:id="@+id/shareButton6"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:contentDescription="Share"
+                        android:src="@android:drawable/ic_menu_share"
+                        app:layout_constraintBottom_toBottomOf="@id/buyTicketsButton6"
+                        app:layout_constraintEnd_toStartOf="@id/buyTicketsButton6"
+                        app:layout_constraintTop_toTopOf="@id/buyTicketsButton6" />
+
+                    <Button
+                        android:id="@+id/buyTicketsButton6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF5722"
+                        android:text="Buy Tickets"
+                        android:textColor="#000000"
+                        app:layout_constraintBottom_toBottomOf="@id/priceTextView6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/priceTextView6" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- The Duck Tour - The Aristocrats -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/concertCard7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#222222"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/artistNameTextView7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="The Duck Tour - The Aristocrats"
+                        android:textColor="#FF5722"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/dateTextView7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📅 11 May 2025"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/artistNameTextView7" />
+
+                    <TextView
+                        android:id="@+id/venueTextView7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📍 Phoenix Mark"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dateTextView7" />
+
+                    <TextView
+                        android:id="@+id/priceTextView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="🎟 ₹2500"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/venueTextView7" />
+
+                    <ImageButton
+                        android:id="@+id/shareButton7"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@null"
+                        android:contentDescription="Share"
+                        android:src="@android:drawable/ic_menu_share"
+                        app:layout_constraintBottom_toBottomOf="@id/buyTicketsButton7"
+                        app:layout_constraintEnd_toStartOf="@id/buyTicketsButton7"
+                        app:layout_constraintTop_toTopOf="@id/buyTicketsButton7" />
+
+                    <Button
+                        android:id="@+id/buyTicketsButton7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF5722"
+                        android:text="Buy Tickets"
+                        android:textColor="#000000"
+                        app:layout_constraintBottom_toBottomOf="@id/priceTextView7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/priceTextView7" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
